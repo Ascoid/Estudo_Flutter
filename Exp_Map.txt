@@ -1,0 +1,33 @@
+class InfosPessoa {
+  int idade;
+  InfosPessoa(this.idade);
+  
+}
+
+void main(){
+ 
+//// criando as lista do Map com DDDS
+  Map<int, String> ddds = Map();
+  ddds[11] = "Sao Paulo";
+  ddds[19] = "Campinas";
+  ddds[13] = "Nao sei!";
+  
+//// Mostra o que a na variavel (ddds)
+  print(ddds);
+
+//// Mostra somente o numero da variavem ddds com (Keys)
+  print(ddds.keys);
+
+//// Mostra somente o nomes que a na variavem ddds com (Values)
+  print(ddds.values);
+
+//// Remove do ddds o 11: Sao Paulo com (Remove)
+  ddds.remove(11);
+  
+  print(ddds);
+  
+  Map<String, dynamic> pessoa = Map();
+  pessoa["nome"] = "Enzo";
+  pessoa["idade"] = 10; 
+  pessoa["altura"] = 1.50;
+}
