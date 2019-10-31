@@ -1,0 +1,47 @@
+////////////////////////////////////////////////////////////////////
+//// Listas    
+
+class Pessoa{
+  String nome;
+  int idade;
+  
+//// Contrutor 
+  Pessoa(this.nome, this.idade);
+}
+
+
+
+void main(){
+  List<String> nomes = ["Rafael", "Talia", "Helio"];
+
+//// Mostra o nome na posiçao  
+  print(nomes [0]);
+
+//// Ira add um novo nome no String 
+  nomes.add("Marcos");
+  print(nomes);
+  
+//// Mostrara a quantidade de nomes na String
+  print(nomes.length);
+  
+//// remove um nome na String
+  nomes.removeAt(2);
+
+//// ira inserir Thiago na posiçao 1    
+  nomes.insert(1, "Thiago");
+  
+//// ira verificar se o nomes joao existe na lista 
+  print (nomes.contains("joao"));
+  
+///// Criando a nova lista e colocando uma lista vazia ( List() )
+  List<Pessoa> pessoas = List();  
+  
+  pessoas.add(Pessoa("Marcelo", 30));
+  pessoas.add(Pessoa("Joao", 20));
+ 
+//// For que ira colocar todos os nomes das Pessoa e coloca no p (conhecido como for it )  
+  for(Pessoa p in pessoas){
+    print(p.nome);
+  }
+    
+}

@@ -1,0 +1,84 @@
+class animal {
+// comde esta todas as informaçoes da herança
+  String nome;
+  double peso;
+
+  animal (this.nome, this.peso);
+  
+  void comer(){
+    print("$nome comeu!");
+  }
+
+  void fazerSom(){
+    print("$nome fez algum som!");
+  }  
+}
+
+///////////////////////////////////////////////////////////////
+// inicio Cachorro
+
+class Cachorro extends animal {
+  
+  int fofura;
+  
+  Cachorro(String nome, double peso, this.fofura) : super (nome, peso);
+  
+  void brincar(){
+    fofura += 10;
+    print("Fofura do $nome aumentou para $fofura!!!"); 
+  }
+}
+///////////////////////////////////////////////////////////////
+// inicio Gato
+
+class Gato extends animal {
+  
+  int fofura;
+  
+  Gato(String nome, double peso) : super(nome, peso);
+bool amigavel(){
+    return true;
+  }
+} 
+///////////////////////////////////////////////////////////////
+// inicio Papagaio
+
+class Papagaio extends animal{
+  
+  double tamanho;
+  
+  Papagaio(String nome, double peso, this.tamanho) : super(nome, peso);
+ 
+  void mais(){
+    tamanho += 10;
+    print("$nome cresceu: $tamanho !!"); 
+  }
+  bool eleFala(){
+      return false;
+  }
+}
+
+///////////////////////////////////////////////////////////////
+// Resposta do codigo
+
+void main(){
+  Cachorro cachorro = Cachorro("Dog", 10.0, 10);
+  cachorro.fazerSom();
+  cachorro.comer();
+  cachorro.brincar();
+  print("");
+  
+  Gato gatos = Gato("Cat", 9.0);
+  gatos.fazerSom();
+  gatos.comer();
+  gatos.amigavel();
+  print("Esta amigavel? ${gatos.amigavel()}");
+ 
+  Papagaio passaro = Papagaio("passaro", 0.5, 10);
+  passaro.comer();
+  passaro.mais();
+  print("Ele fala? ${passaro.eleFala()}");
+  
+  
+  
+}
